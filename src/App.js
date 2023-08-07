@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import SoccerCalendarForm from './Components/SoccerCalendarForm/SoccerCalendarForm';
+import SoccerCalendarList from './Components/SoccerCalendarList/SoccerCalendarList';
+
 
 function App() {
+  const [items, setItems] = useState ([
+        {
+          createdAt: 1689374598465,
+          location: 'Madrid',
+          team1: 'Real Madrid',
+          team2: 'Barcelona',
+          date: '2023-08-11',
+          winner: 'Real Madrid',
+        },
+        {
+          createdAt: 1689374598466,  
+          location: 'Barcelona',
+          team1: 'Barcelona',
+          team2: 'Real Madrid',
+          date: '20230-10-12',
+          winner: null,
+        },
+  ]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Soccer Calendar</h1>
       </header>
+     <SoccerCalendarForm/>
+     <SoccerCalendarList items={items}/>
     </div>
   );
 }
