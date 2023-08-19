@@ -7,7 +7,7 @@ import SoccerCalendarList from './Components/SoccerCalendarList/SoccerCalendarLi
 function App() {
   const [items, setItems] = useState ([
         {
-          createdAt: 1689374598465,
+          id: 1689374598465,
           location: 'Madrid',
           team1: 'Real Madrid',
           team2: 'Barcelona',
@@ -15,7 +15,7 @@ function App() {
           winner: 'Real Madrid',
         },
         {
-          createdAt: 1689374598466,  
+          id: 1689374598466,  
           location: 'Barcelona',
           team1: 'Barcelona',
           team2: 'Real Madrid',
@@ -24,13 +24,35 @@ function App() {
         },
   ]);
 
+  function updateWinner(id, newWinnerValue) {
+       let result = [];
+       let newItems = structuredClone(items);
+       for (let item of newItems) {
+        if (item.id === id) {
+           item.winner = newWinnerValue; 
+        }
+        result.push(item);
+       }
+       setItems(result);
+  }
+
+  function deleteItem(id) {
+       let result = [];
+       for (let item of items) {
+        if (item.id !== id) {
+          result.push(item);
+        }
+       }
+       setItems(result);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Soccer Calendar</h1>
       </header>
      <SoccerCalendarForm/>
-     <SoccerCalendarList items={items}/>
+     <SoccerCalendarList items={items} updateWinner={updateWinner} deleteItem={deleteItem}/>
     </div>
   );
 }

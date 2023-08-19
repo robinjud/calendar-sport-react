@@ -1,0 +1,18 @@
+.form-row {
+ padding: 12px;
+}
+
+form {
+    border: 2px solid white;
+    padding: 24px;
+    font-size: 24px;
+}
+
+input {
+    padding: 8px;
+
+}
+label, input {
+    margin: 16px;
+    font-size: 24px;
+}
