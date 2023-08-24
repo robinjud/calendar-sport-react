@@ -24,6 +24,25 @@ function App() {
         },
   ]);
 
+  function createItem(date, location, home, guest) {
+       setItems(oldItems => {
+            let newItems = [
+              ...oldItems,
+              {
+                id: new Date().getTime(),
+                location,
+                team1: home,
+                team2: guest,
+                date,
+                winner: null,
+
+              },
+            ];
+            newItems.sort((match1, match2) => match1.date > match2.date ? 1 : -1);
+            return newItems;
+       });
+  }
+
   function updateWinner(id, newWinnerValue) {
        let result = [];
        let newItems = structuredClone(items);
@@ -51,7 +70,7 @@ function App() {
       <header className="App-header">
         <h1>Soccer Calendar</h1>
       </header>
-     <SoccerCalendarForm/>
+     <SoccerCalendarForm createItem={createItem}/>
      <SoccerCalendarList items={items} updateWinner={updateWinner} deleteItem={deleteItem}/>
     </div>
   );
