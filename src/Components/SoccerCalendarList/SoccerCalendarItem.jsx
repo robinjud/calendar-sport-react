@@ -30,16 +30,16 @@ export default function SoccerCalendarItem({
   if (winner === null) {
     ActionsTdJsx = (
       <td>
-        <button onClick={homeWonHandler}>Home won</button>
-        <button onClick={guessWonHandler}>Guest won</button>
-        <button onClick={deleteHandler}>Delete</button>
+        <button onClick={homeWonHandler} class="controlbuttons">Home won</button>
+        <button onClick={guessWonHandler} class="controlbuttons">Guest won</button>
+        <button onClick={deleteHandler} class="controlbuttons">Delete</button>
       </td>
     );
   } else {
     ActionsTdJsx = (
       <td>
-        <button onClick={resetHandler}>Reset</button>
-        <button onClick={deleteHandler}>Delete</button>
+        <button onClick={resetHandler} class="controlbuttons">Reset</button>
+        <button onClick={deleteHandler} class="controlbuttons">Delete</button>
       </td>
     );
   }

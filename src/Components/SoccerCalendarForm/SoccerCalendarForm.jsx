@@ -22,6 +22,7 @@ export default function SoccerCalendarForm({ createItem }) {
         <div className='form-row'>
              <label htmlFor="date">Date</label>
              <input 
+             class="form-input"
              type='date' 
              id="date" 
              required  
@@ -31,6 +32,7 @@ export default function SoccerCalendarForm({ createItem }) {
         <div className='form-row'>
              <label  htmlFor="location">Location</label>
              <input 
+             class="form-input"
              type="text" 
              id="location" 
              required 
@@ -39,7 +41,8 @@ export default function SoccerCalendarForm({ createItem }) {
         </div>
         <div className='form-row'>
              <label  htmlFor="home">Home</label>
-             <input 
+             <input
+             class="form-input" 
              type="text" 
              id="home"
              required
@@ -49,6 +52,7 @@ export default function SoccerCalendarForm({ createItem }) {
         <div className='form-row'>
              <label  htmlFor="guest">Guest</label>
              <input 
+             class="form-input"
              type="text" 
              id="guest" 
              required
@@ -56,7 +60,7 @@ export default function SoccerCalendarForm({ createItem }) {
              onChange={event => setGuest(event.target.value)}/>
         </div>
         <div className='form-row'>
-            <button type="submit">Add</button>
+            <button type="submit" class="addbutton" >Add</button>
         </div>
     </form>
   );

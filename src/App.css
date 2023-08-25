@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #282c34;
-  color: white;
+  background-color: #062f7f;
+  color:burlywood;
   min-height: 90vh;
 }
 
@@ -11,4 +11,27 @@
 
 .invisible {
   display: none;
+}
+
+.form-input {
+  border-radius:.5rem;
+}
+
+.addbutton {
+  padding-block:.3rem;
+  padding-inline: 2rem;
+  color:black;
+  background:#b2beb5;
+  font-size: 22px;
+  border-radius: .5rem;
+}
+
+.controlbuttons {
+  margin:.5rem;
+  border-radius: .4rem;
+  padding-block: .3rem;
+  padding-inline: .5rem;
+  font-size: 15px;
+  background: #b2beb5;
+  
 }

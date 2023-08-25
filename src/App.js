@@ -19,7 +19,7 @@ function App() {
           location: 'Barcelona',
           team1: 'Barcelona',
           team2: 'Real Madrid',
-          date: '20230-10-12',
+          date: '2023-10-12',
           winner: null,
         },
   ]);

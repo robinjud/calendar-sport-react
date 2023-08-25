@@ -3,9 +3,12 @@
 }
 
 form {
-    border: 2px solid white;
+    border: 3px solid white;
     padding: 24px;
     font-size: 24px;
+    width:60%;
+    margin:auto;
+
 }
 
 input {
