@@ -2,11 +2,14 @@ Soccer Calendar
 
 User Stories
 
-As a returning customers the use this new sport calendar can bring me closer to my favorite team so I am continiously inform about its performance.
+As a returning customers the use this new sport calendar can bring me closer to my favorite team
+so I am continiously inform about its performance.
 
-As a long time Value customer I like to be inform about my favority sports so I would like to have a faster and acurate update on the performace of my teams.
+As a long time Value customer I like to be inform about my favority sports
+so I would like to have a faster and acurate update on the performace of my teams.
 
-As a new costumer I expect the most acurate update about my favorite team so I can be properly inform.
+As a new costumer I expect the most acurate update about my favorite team
+so I can be properly inform.
 
 # Getting Started with Create React App
 
